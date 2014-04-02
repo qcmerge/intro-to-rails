@@ -1,7 +1,7 @@
 # Class 1 - April 5, 2014
 
 * Introductions - instructors and students
-* Course overview
+* [Course overview](./course_overview.md)
 * Intro to Ruby - Ben
 * Intro to Rails - Jim
 
