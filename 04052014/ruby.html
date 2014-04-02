@@ -1,77 +1,77 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Intro to Rails: Starting with Ruby - April 5, 2014</title>
+    <title>Intro to Rails: Starting with Ruby - April 5, 2014</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../revealjs_common/css/reveal.min.css">
-		<link rel="stylesheet" href="../revealjs_common/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="../revealjs_common/css/reveal.css">
+    <link rel="stylesheet" href="../revealjs_common/css/theme/default.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../revealjs_common/lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs_common/lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="../revealjs_common/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs_common/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Intro to Rails: Starting with Ruby</h1>
-					<p>
-						<small>Presented by Ben Stafford / <a href="http://twitter.com/benstafford">@benstafford</a></small>
-					</p>
-				</section>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+	<section>
+	  <h1>Intro to Rails: Starting with Ruby</h1>
+	  <p>
+	    <small>Presented by Ben Stafford / <a href="http://twitter.com/benstafford">@benstafford</a></small>
+	  </p>
+	</section>
 
-				<section>
-					<h2>Why are we talking about Ruby?</h2>
-					<p>
-						Ruby is the programming language
-					</p>
+	<section>
+	  <h2>Why are we talking about Ruby?</h2>
+	  <p>
+	    Ruby is the programming language
+	  </p>
           <p>
             Rails is the framework (a Ruby application).
           </p>
 
 
-					<aside class="notes">
-						Why are we talking about Ruby when this is a Intro to Rails course?  Rails wouldn't exist without Ruby.
+	  <aside class="notes">
+	    Why are we talking about Ruby when this is a Intro to Rails course?  Rails wouldn't exist without Ruby.
             The Rails framework is written in Ruby and provides a lot of features that makes web development easier.
             It's possible to write web applications in just plain Ruby, but it wouldn't be much fun.
-					</aside>
-				</section>
+	  </aside>
+	</section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>What is Ruby?</h2>
-						<p>
-							Programming language created by Yukihiro "Matz" Matsumoto. First publicly released in 1995.
+	<!-- Example of nested vertical slides -->
+	<section>
+	  <section>
+	    <h2>What is Ruby?</h2>
+	    <p>
+	      Programming language created by Yukihiro "Matz" Matsumoto. First publicly released in 1995.
               <img src="../revealjs_common/images/matz.jpg">
-						</p>
-					</section>
-					<section>
-						<h2>Ruby Design Goals</h2>
-						<p>
+	    </p>
+	  </section>
+	  <section>
+	    <h2>Ruby Design Goals</h2>
+	    <p>
               "I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language." - Matz
             </p>
             <br />
@@ -83,124 +83,124 @@
                 <li>Loosely typed</li>
               </ul>
             </div>
-					</section>
-					<section>
-						<h2>Open Source</h2>
-						<p>
+	  </section>
+	  <section>
+	    <h2>Open Source</h2>
+	    <p>
               Anyone can access the source code to read, contribute, or fork to hack with on their own. <a href="https://github.com/ruby/ruby" target="_blank">Ruby Source at Github</a>
             </p>
-					</section>
-					<section>
-						<h2>Object Oriented</h2>
-						<p>Everything is an object in Ruby. What does this mean?</p>
+	  </section>
+	  <section>
+	    <h2>Object Oriented</h2>
+	    <p>Everything is an object in Ruby. What does this mean?</p>
             <p class="fragment">It means that everything responds to "messages" - how you access attributes and functions of objects</p>
             <p class="fragment">
               <pre class="fragment"><code data-trim>
-                5.times { puts "Hello" }
-Hello
-Hello
-Hello
-Hello
-Hello
+                  5.times { puts "Hello" }
+		  Hello
+		  Hello
+		  Hello
+		  Hello
+		  Hello
 
-5.class
-=> Fixnum
-              </code></pre>
-            </p>
-            <p class="fragment"><a href="http://www.ruby-doc.org/core-2.1.0/Fixnum.html" target="_blank">Ruby docs for Fixnum</a></p>
-					</section>
-          <section>
-            <h2>Dynamic</h2>
-            <p>
-              The language can be modified or extended at runtime.
+		  5.class
+		  => Fixnum
+</code></pre>
+</p>
+<p class="fragment"><a href="http://www.ruby-doc.org/core-2.1.0/Fixnum.html" target="_blank">Ruby docs for Fixnum</a></p>
+</section>
+<section>
+  <h2>Dynamic</h2>
+  <p>
+    The language can be modified or extended at runtime.
 
-              <pre><code data-trim>
-class Numeric
-  def plus(x)
-    self.+(x)
-  end
-end
+    <pre><code data-trim>
+	class Numeric
+	def plus(x)
+	self.+(x)
+	end
+	end
 
-y = 5.plus 6
-# y is now equal to 11
-              </code></pre>
-            </p>
-            <p><a href="http://www.ruby-doc.org/core-2.1.1/Numeric.html" target="_blank">Ruby docs for Numeric</a></p>
-          </section>
-          <section>
-            <h2>Loosely Typed</h2>
-            <p>
-              You don't need to tell Ruby what "type" a variable needs to be.
+	y = 5.plus 6
+	# y is now equal to 11
+    </code></pre>
+  </p>
+  <p><a href="http://www.ruby-doc.org/core-2.1.1/Numeric.html" target="_blank">Ruby docs for Numeric</a></p>
+</section>
+<section>
+  <h2>Loosely Typed</h2>
+  <p>
+    You don't need to tell Ruby what "type" a variable needs to be.
 
-              <pre><code data-trim>
-name = "Ben"
-name.class
-=> String
-</code><code data-trim>
-name = 10
-name.class
-=> Fixnum
-              </code></pre>
-            </p>
-          </section>
-				</section>
+    <pre><code data-trim>
+	name = "Ben"
+	name.class
+	=> String
+      </code><code data-trim>
+	name = 10
+	name.class
+	=> Fixnum
+    </code></pre>
+  </p>
+</section>
+</section>
 
-				<section>
-					<h2>TryRuby.org</h2>
-          <p>Read the narrative - it enforces a lot of what you're doing</p>
-          <p>You *can* copy and paste commands, but typing everything in will help with recall</p>
-          <p>Pay attention to how the code is formatted (spacing) - style is very important with Ruby<p>
+<section>
+  <h2>TryRuby.org</h2>
+  <p>Read the narrative - it enforces a lot of what you're doing</p>
+  <p>You *can* copy and paste commands, but typing everything in will help with recall</p>
+  <p>Pay attention to how the code is formatted (spacing) - style is very important with Ruby<p>
 
-          <aside class="notes">
-            Will probably take 30-45 minutes.
-          </aside>
-				</section>
+    <aside class="notes">
+      Will probably take 30-45 minutes.
+    </aside>
+</section>
 
-        <section>
-          <h2>Ruby Koans</h2>
-        </section>
+<section>
+  <h2>Ruby Koans</h2>
+</section>
 
-        <section>
-          <h2 MOAR Learning</h2>
-          <ul><li>http://www.codecademy.com/tracks/ruby</li></ul>
-        </section>
+<section>
+  <h2 MOAR Learning</h2>
+      <ul><li>http://www.codecademy.com/tracks/ruby</li></ul>
+</section>
 
-			</div>
+</div>
 
-		</div>
+</div>
 
-		<script src="../revealjs_common/lib/js/head.min.js"></script>
-		<script src="../revealjs_common/js/reveal.min.js"></script>
+<script src="../revealjs_common/lib/js/head.min.js"></script>
+<script src="../revealjs_common/js/reveal.min.js"></script>
 
-		<script>
+<script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+  // Parallax scrolling
+  // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+  // parallaxBackgroundSize: '2100px 900px',
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '../revealjs_common/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../revealjs_common/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs_common/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../revealjs_common/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../revealjs_common/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../revealjs_common/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+  { src: '../revealjs_common/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: '../revealjs_common/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: '../revealjs_common/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: '../revealjs_common/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: '../revealjs_common/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+  { src: '../revealjs_common/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+  });
 
-		</script>
+</script>
 
-	</body>
+</body>
 </html>
