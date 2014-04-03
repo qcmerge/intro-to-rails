@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to Rails: Without Ruby - April 5, 2014</title>
+
+    <meta name="description" content="QC Merge Introduction to Rails Course">
+    <meta name="author" content="Ben Stafford">
+    <meta name="author" content="Jim Anders">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../revealjs_common/css/reveal.css">
+    <link rel="stylesheet" href="../revealjs_common/css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs_common/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs_common/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+	<section>
+	  <h1>Intro to Rails: Without Ruby</h1>
+	  <p>
+	    <small>Jim Anders / <a href="http://twitter.com/janders223">@janders223</a></small>
+	  </p>
+	</section>
+        <section>
+          <h1>History</h1>
+        </section>
+        <section>
+          <h1>DHH</h1>
+          <img src="../revealjs_common/images/dhh.jpg" alt="DHH"/>
+        </section>
+        <section>
+          <h1>2004</h1>
+        </section>
+        <section>
+          <h1>Apple</h1>
+        </section>
+        <section>
+          <h1>Merb</h1>
+        </section>
+        <section>
+          <h1>Today</h1>
+        </section>
+        <section>
+          <h1>MVC</h1>
+          <h4 class="fragment">M(odel) V(iew) C(ontroller)</h4>
+        </section>
+        <section>
+          <h1>Model</h1>
+          <ul>
+            <li class="fragment">Central Component</li>
+            <li class="fragment">Holds all of the business logic</li>
+            <li class="fragment">Manages the state of the application data</li>
+          </ul>
+        </section>
+        <section>
+          <h1>View</h1>
+          <ul>
+            <li class="fragment">Presentation layer</li>
+            <li class="fragment">What the user interacts with</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Controller</h1>
+          <ul>
+            <li class="fragment">Connects the model to the view</li>
+            <li class="fragment">Manages the application state</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Concepts</h1>
+        </section>
+        <section>
+          <h1>REST</h1>
+        </section>
+        <section>
+          <h1>Representational State Transfer</h1>
+        </section>
+        <section>
+          <h1>GET</h1>
+          <h4>http://example.com/resources</h4>
+          <h4>http://example.com/resources/1</h4>
+        </section>
+        <section>
+          <h1>POST</h1>
+          <h4>http://example.com/resources</h4>
+        </section>
+        <section>
+          <h1>PUT/PATCH</h1>
+          <h4>http://example.com/resources/1</h4>
+        </section>
+        <section>
+          <h1>DELETE</h1>
+          <h4>http://example.com/resources/1</h4>
+        </section>
+        <section>
+          <h1>Convention over Configuration</h1>
+        </section>
+        <section>
+          <img src="../revealjs_common/images/example.png" alt="CoC"/>
+        </section>
+        <section>
+          <h1>Tons of other features</h1>
+        </section>
+        <section>
+          <h1>Instant Gratification</h1>
+        </section>
+        <section>
+          <h4>https://www.codeschool.com/courses/rails-for-zombies-redux</h4>
+        </section>
+      </div>
+    </div>
+
+    <script src="../revealjs_common/lib/js/head.min.js"></script>
+    <script src="../revealjs_common/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+      // Parallax scrolling
+      // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+      // parallaxBackgroundSize: '2100px 900px',
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: '../revealjs_common/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: '../revealjs_common/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../revealjs_common/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: '../revealjs_common/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: '../revealjs_common/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: '../revealjs_common/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+      });
+
+    </script>
+
+  </body>
+</html>
