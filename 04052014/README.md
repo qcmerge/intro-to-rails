@@ -18,3 +18,7 @@
 	 - `ruby -v`
 	 - `rails -v`
   9. Install the nitrous.io desktop client for your OS
+
+## Documentation links
+[Ruby](http://ruby-doc.org)
+[Rails 4.0.0](http://api.rubyonrails.org)
