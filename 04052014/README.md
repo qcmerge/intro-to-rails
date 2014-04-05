@@ -19,7 +19,12 @@
 	 - `rails -v`
   9. Install the nitrous.io desktop client for your OS
 
-## Documentation links
-[Ruby](http://ruby-doc.org)
+## More learning resources
+[Codecademy](http://www.codecademy.com/tracks/ruby)  
+[TryGit](http://try.github.io/) - more Git  
+[Git Immersion](http://gitimmersion.com/)  
+[Rails for Zombies](http://railsforzombies.org/)  
 
+## Documentation links
+[Ruby](http://ruby-doc.org)  
 [Rails 4.0.0](http://api.rubyonrails.org)
