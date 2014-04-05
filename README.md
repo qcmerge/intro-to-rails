@@ -1,2 +1,4 @@
-qc-rails
-========
+# QC Merge
+
+## Intro to Rails
+

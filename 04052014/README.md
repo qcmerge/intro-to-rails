@@ -13,6 +13,8 @@
   4. Create new box with your first and last name (ie: `ben-stafford`)
   5. Add `benstafford` and `janders223` as collaborators to your box
   6. Click "Reaveal Public Key" and then click "Add to Github"
-  6. click the `IDE` button on your box
-  7. In the console, run the following commands:
-
+  7. click the `IDE` button on your box
+  8. In the console, run the following commands:
+	 - `ruby -v`
+	 - `rails -v`
+  9. Install the nitrous.io desktop client for your OS
