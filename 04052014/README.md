@@ -28,3 +28,9 @@
 ## Documentation links
 [Ruby](http://ruby-doc.org)  
 [Rails 4.0.0](http://api.rubyonrails.org)
+
+## Getting Help
+
+ 1. [File an Issue](https://github.com/qcmerge/intro-to-rails/issues)
+ 2. Email Ben or Jim
+ 3. [Gaslight Campfire](https://gaslightsoftware.campfirenow.com/3bec7)
