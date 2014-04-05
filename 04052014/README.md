@@ -34,5 +34,5 @@
 ## Getting Help
 
  1. [File an Issue](https://github.com/qcmerge/intro-to-rails/issues)
- 2. Email Ben or Jim
+ 2. Email [Ben](mailto:bendstafford@gmail.com), [Jim](mailto:jim@gaslight.co), [Alex](mailto:alex@gaslight.co), or [Tom](mailto:twillis@topgunhq.com)
  3. [Gaslight Campfire](https://gaslightsoftware.campfirenow.com/3bec7)
