@@ -15,8 +15,8 @@
 * Navigating a project? (Gemfile, routes, file locations)
 
 ## Week Two (4/12/2014)
-* More advanced Ruby? (practice with blocks, understanding DSLs)
-* Get started on our sample application (TDD, scaffolding?, CRUD)
+* More advanced Ruby? (practice with blocks)
+* Get started on our sample application (TDD, CRUD)
 
 ## Week Three (4/19/2014)
 * CRUD features
