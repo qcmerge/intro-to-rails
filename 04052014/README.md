@@ -24,6 +24,7 @@
 [TryGit](http://try.github.io/) - more Git  
 [Git Immersion](http://gitimmersion.com/)  
 [Rails for Zombies](http://railsforzombies.org/)  
+[Railscasts](http://railscasts.com/)  
 
 ## Documentation links
 [Ruby](http://ruby-doc.org)  
