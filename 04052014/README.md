@@ -27,7 +27,7 @@
 
 ## Documentation links
 [Ruby](http://ruby-doc.org)  
-[Rails 4.0.0](http://api.rubyonrails.org)
+[Rails 4.0.0](http://api.rubyonrails.org)  
 [Rails Guides](http://guides.rubyonrails.org)
 
 ## Getting Help
