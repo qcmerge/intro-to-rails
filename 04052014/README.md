@@ -25,6 +25,7 @@
 [Git Immersion](http://gitimmersion.com/)  
 [Rails for Zombies](http://railsforzombies.org/)  
 [Railscasts](http://railscasts.com/)  
+[The Command Line Crash Course](http://cli.learncodethehardway.org/book/) _Thanks Chip!_
 
 ## Documentation links
 [Ruby](http://ruby-doc.org)  
