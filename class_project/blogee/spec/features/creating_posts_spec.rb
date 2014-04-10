@@ -35,6 +35,6 @@ feature 'Creating posts' do
     # assert that we are still on the form
     expect(current_path).to eq new_post_path
     # assert that we are getting the error flash
-    expect(page).to have_content('#error')
+    expect(page).to have_content('.alert.alert-error')
   end
 end
