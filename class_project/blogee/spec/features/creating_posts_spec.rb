@@ -2,8 +2,8 @@ require 'spec_helper'
 
 feature 'Creating posts' do
   scenario 'with valid attributes' do
-    # visit  the root path in the browser
-    visit '/'
+    # visit the posts path in the browser
+    visit posts_path
     # find a link titled new post and click it
     click_link 'New Post'
     # find the text field called Title and fill it in with the text
@@ -26,8 +26,8 @@ feature 'Creating posts' do
 
   scenario 'with invalid attributes' do
     pending "Please Finish: Creating posts with valid attributes before starting"
-    # visit the root path in the browser
-    visit "/"
+    # visit the posts path in the browser
+    visit posts_path
     # find a link titled New Post and click it
     click_link 'New Post'
     # find the button called Save and click it

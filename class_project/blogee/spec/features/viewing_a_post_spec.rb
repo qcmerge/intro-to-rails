@@ -6,7 +6,7 @@ feature 'Viewing a post spec' do
   
   scenario do
     pending "Please complete creating_posts_spec.rb"
-    visit '/'
+    visit posts_path
     click_link post.title
     expect(current_page).to eq post_path(post)
     within('#title') do
