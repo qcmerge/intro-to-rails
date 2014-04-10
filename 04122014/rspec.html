@@ -58,9 +58,11 @@ require 'spec_helper'
 describe Thing do
   let(:thing) { Thing.new }
 
-  it "should return chunky bacon" do
-    thing.value = "chunky bacon"
-    expect(thing).to eq "chunky bacon"
+  context "with chunky bacon" do
+    it "should return chunky bacon" do
+      thing.value = "chunky bacon"
+      expect(thing).to eq "chunky bacon"
+    end
   end
 end
 	  </code></pre>
