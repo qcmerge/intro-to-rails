@@ -82,4 +82,12 @@ describe RomanNumeral do
   it "converts 29 to XXIX" do
     expect(converter.convert(29)).to eq "XXIX"
   end
+
+  it "converts 50 to L" do
+    expect(converter.convert(50)).to eq "L"
+  end
+
+  it "converts 100 to C" do
+    expect(converter.convert(100)).to eq "C"
+  end
 end
