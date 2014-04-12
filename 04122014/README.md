@@ -13,3 +13,4 @@
 * `git add .` Stages files to be commited
 * `git commit -m "Some meaningful message about your changes"` Commits your changes to version control
 * `git push origin master` Pushes your changes to GitHub
+
