@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Active Record Validations and Associations</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../revealjs_common/css/reveal.css">
+    <link rel="stylesheet" href="../revealjs_common/css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../revealjs_common/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../revealjs_common/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+  <section>
+    <h1>Active Record Validations and Associations</h1>
+  </section>
+
+  <section>
+    <h2>Active Record Validations</h2>
+    <p style="text-align:left;">
+      A way to ensure that data stored to database is valid - no missing information, data is formatted, etc.
+    </p>
+    <p style="text-align:left;">
+      <br />Other methods
+      <p style="text-align:left;">
+        &bull; Database constraints or stored procedures<br />
+        &bull; Client-side validations (like with Javascript)<br />
+        &bull; Controller-level validations<br />
+      </p>
+    </p>
+  </section>
+  <section>
+    <h2>When Validation Happens</h2>
+    <p style="text-align:left;">
+      create / create!<br />
+      save / save!<br />
+      update / update!<br /><br />
+      <pre><code data-trim>
+p = Person.new(name: "John Doe") #no validation yet
+p.save # validation happens
+</code></pre>
+    </p>
+  </section>
+  <section>
+    <h2>Validity and Error Messages</h2>
+    <p>
+      <pre><code data-trim>
+        class Person < ActiveRecord::Base
+  validates :name, presence: true
+end
+
+p = Person.new
+=> #< Person id: nil, name: nil>
+p.errors.messages
+=> {}
+
+p.valid?
+=> false
+p.errors.messages
+=> {name:["can't be blank"]}
+</code></pre>
+    </p>
+  </section>
+  <section>
+    <h2>Validation Helpers</h2>
+    <p>
+      Collection of helpers that will cover most of your validation needs.
+    </p>
+    <p>
+      :presence
+      <pre><code data-trim>
+        class Person < ActiveRecord::Base
+  validates :name, :login, :email, presence: true
+end
+</code></pre>
+    </p>
+  </section>
+  <section>
+    <h2>Validation Helpers</h2>
+    <p>
+      :uniqueness
+      <pre><code data-trim>
+        class Holiday < ActiveRecord::Base
+  validates :name, uniqueness: { scope: :year,
+    message: "should happen once per year" }
+end
+</code></pre>
+    </p>
+  </section>
+  <section>
+    <h2>Validation Helpers</h2>
+    <p>
+      :numericality
+      <pre><code data-trim>
+        class Player < ActiveRecord::Base
+  validates :points, numericality: true
+  validates :games_played, numericality: { only_integer: true }
+end
+</code></pre>
+    </p>
+  </section>
+  <section>
+    <h2>Validation Helpers</h2>
+    <p style="text-align:left;">
+      And more...<br />
+      :format - supply regular expression that defines format<br />
+      :inclusion - ensure value is one of several possible values<br />
+      :length - limit length of a string
+    </p>
+    <p style="text-align:left;"><br /><a href="http://guides.rubyonrails.org/active_record_validations.html">Rails Guide - Active Record Validations</a></p>
+  </section>
+  <section>
+    <h2>Active Record Associations</h2>
+    <p>
+      An Active Record association is a connection between Active Record models.  This association streamlines and
+      simplifies common operations.
+    </p>
+  </section>
+  <section>
+    <h2>Without Associations</h2>
+    <p>
+<pre><code data-trim>
+  class Customer < ActiveRecord::Base
+end
+
+class Order < ActiveRecord::Base
+end
+
+# creating an order
+@order = Order.create(order_date: Time.now, customer_id: @customer.id)
+
+# deleting a customer and ensuring all orders are removed
+@orders = Order.where(customer_id: @customer.id)
+@orders.each do |order|
+  order.destroy
+end
+@customer.destroy
+</code></pre>
+    </p>
+  </section>
+  <section>
+    <h2>With Associations</h2>
+    <p>
+<pre><code data-trim>
+  class Customer < ActiveRecord::Base
+  has_many :orders, dependent: :destroy
+end
+
+class Order < ActiveRecord::Base
+  belongs_to :customer
+end
+
+@order = @customer.orders.create(order_date: Time.now)
+
+@customer.destroy
+</code></pre>
+    </p>
+  </section>
+  <section>
+    <h2>Belongs To</h2>
+    <p>One-to-one connection between models - one instance of a model "belongs to" one instance of another model.</p>
+    <P>Gotcha: Make sure you use singular form!
+<pre><code data-trim>
+  class Order < ActiveRecord::Base
+  belongs_to :customer
+end
+</code></pre>
+    <img src="../revealjs_common/images/belongs_to.png">
+  </section>
+  <section>
+    <h2>Has Many</h2>
+    <p>A one-to-many connection between models</p>
+<pre><code data-trim>
+  class Customer < ActiveRecord::Base
+  has_many :orders
+end
+</code></pre>
+    <img src="../revealjs_common/images/has_many.png">
+  </section>
+  <section>
+    <h2>More Associations</h2>
+    <p>has_one</p>
+    <p>has_many, :through</p>
+    <p>has_one, :through</p>
+    <p>has_and_belongs_to_many</p>
+    <p><a href="http://guides.rubyonrails.org/association_basics.html">Rails Guide - Active Record Associations</a>
+  </section>
+  <section>
+    <h2>Example Time</h2>
+    <p>ChoreMonster code and playing with the console</p>
+  </section>
+</div>
+
+</div>
+
+<script src="../revealjs_common/lib/js/head.min.js"></script>
+<script src="../revealjs_common/js/reveal.min.js"></script>
+
+<script>
+
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+
+  theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+  transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Parallax scrolling
+  // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+  // parallaxBackgroundSize: '2100px 900px',
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+  { src: '../revealjs_common/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: '../revealjs_common/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: '../revealjs_common/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: '../revealjs_common/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: '../revealjs_common/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+  { src: '../revealjs_common/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+  });
+
+</script>
+
+</body>
+</html>
