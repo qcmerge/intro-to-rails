@@ -12,3 +12,6 @@
 2. Allow a user to sign in with your choice of username or email and their password
 3. Associate posts to users
 4. Only allow signed in users to create new posts
+
+## Resources
+[has_secure_password docs](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
