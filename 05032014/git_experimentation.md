@@ -40,7 +40,7 @@ Push your local branch to a new remote branch:
 
     $ git push -u origin <branch name that you created during git checkout -b>
 
-Go to github.com/benstafford/git_play and create a pull request with your branch.
+Go to github.com/benstafford/git_play and create a pull request with your branch. (Ben will walk through on the screen)
 
 
 ### Resource
