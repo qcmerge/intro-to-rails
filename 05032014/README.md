@@ -29,19 +29,19 @@ scenario "Creating a post with an attachment" do
   attach_file "File", "spec/fixtures/test.jpg"
   click_button "Save"
   
-  expect(page).to have_content("Ticket has been created.")
+  expect(page).to have_content("My First Post")
   
   within("#asset") do
     expect(page).to have_content("test.jpg")
   end 
 end
 ```
-2. Create a file that matches the name (and location) specified in the attach_file line
-3. Add field to posts form partial (posts/_form.html.erb_) that satisfies the test and modify form to handle file uploads (p. 322)
-4. Modify posts/show.html.erb to display results of file upload (p. 323)
-5. Add carrierwave gem and create AssetUploader.  Run migrations necessary (follow instructions in book)
-6. Adjust post_params in PostsController to handle asset attribute.
-7. Create a new commit (git add --all; git commit -m "SOME MESSAGE").  Also see notes about how to ignore the public/uploads directory when making commits (p. 326).
+3. Create a file that matches the name (and location) specified in the attach_file line
+4. Add field to posts form partial (posts/_form.html.erb_) that satisfies the test and modify form to handle file uploads (p. 322)
+5. Modify posts/show.html.erb to display results of file upload (p. 323)
+6. Add carrierwave gem and create AssetUploader.  Run migrations necessary (follow instructions in book)
+7. Adjust post_params in PostsController to handle asset attribute.
+8. Create a new commit (git add --all; git commit -m "SOME MESSAGE").  Also see notes about how to ignore the public/uploads directory when making commits (p. 326).
 
 ## Resources
 [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
