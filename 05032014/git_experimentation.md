@@ -5,6 +5,10 @@ Clone the repo:
 
     $ git clone git@github.com:benstafford/git_play.git
 
+Navigate to project directory:
+
+    $ cd git_play
+
 Add your name to roster.md file (open file in editor and save)
 
 Add file to stage it:  
