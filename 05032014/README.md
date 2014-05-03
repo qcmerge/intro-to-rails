@@ -5,7 +5,7 @@
 * [Git/Github exercise](./git_experimentation.md)
 * CarrierWave
 * Continue blogee in pairs - file uploading (work on 9.1, other sections are bonus), tracking state
-* Unstructured discovery time - pair up and start on personal projects?
+* Discuss updates to class schedule (for 7 remaining sessions)
 
 
 ### Blogee Objectives
