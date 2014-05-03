@@ -20,9 +20,9 @@ scenario "Creating a post with an attachment" do
   fill_in "Username", with: @user.username
   fill_in "Password", with: @user.password
   click_button "Sign in"
+  click_link 'New Post'
   ### END if authentication in place
 
-  click_link 'New Post'
   fill_in 'Title', with: 'My First Post'
   fill_in 'Content', with: 'Lorem ipsum dolor sit amet.'
 
