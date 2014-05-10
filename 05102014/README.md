@@ -12,6 +12,9 @@
 - `comments_controller#create`
 - send email to @post.author
 
+NOTE: If you use the find_email method in your spec, you'll need to install the email_spec gem into your bundle.  See [email_spec](https://github.com/bmabey/email-spec) for more info.
+
+
 ### Tagging
 
 #### Feature List
