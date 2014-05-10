@@ -1,5 +1,10 @@
 ## May 10, 2014 - Class Six
 
+### Sending email
+
+#### Feature List
+1. Send an email to the author when a comment is created
+
 ### Tagging
 
 #### Feature List
