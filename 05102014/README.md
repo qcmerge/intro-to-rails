@@ -2,8 +2,15 @@
 
 ### Sending email
 
+#### Reading
+
+[Rails Guides - ActionMailer](http://guides.rubyonrails.org/action_mailer_basics.html)
+
 #### Feature List
 1. Send an email to the author when a comment is created
+
+- `comments_controller#create`
+- send email to @post.author
 
 ### Tagging
 
