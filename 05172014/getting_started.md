@@ -68,11 +68,11 @@ $ rails generate model <Model name> <attribute_name:type> <attribute_name: type>
 ```
 
 The "type" can be things like:
-"string" - text field with length limit (usually 255 characters)
-"text" - for a text area - lots of text
-"integer" - whole numbers
-"float" - decimal numbers
-"datetime"
-"boolean" - true/false (or 1/0 in the database)
+* "string" - text field with length limit (usually 255 characters)
+* "text" - for a text area - lots of text
+* "integer" - whole numbers
+* "float" - decimal numbers
+* "datetime"
+* "boolean" - true/false (or 1/0 in the database)
 
 **Reference:** [Rails Guide - Migrations](http://guides.rubyonrails.org/migrations.html)
