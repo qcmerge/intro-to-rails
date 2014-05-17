@@ -16,6 +16,8 @@ For our purposes, we want to use the Postgres database (easy to deploy to Heroku
 
     $ rails new <app_name> -T -d postgresl  
 
+Configure the config/database.yml file to successfully connect your application to its database and then create the development environment database with ```$ rake db:create``` and ```$ rake db:migrate```
+
 **Reference:** [Rails Guide - Getting Started](http://guides.rubyonrails.org/getting_started.html)
 
 ### Check your Gemfile and install Rspec
@@ -53,3 +55,6 @@ You can now create a remote repository at Github.  If you're logged in there, yo
     $ git remote add origin <GIT URL FOR NEW REPOSITORY>
     $ git push -u origin master
 
+### Start Application Development!
+
+Start with something straightforward that is easy to test so that you can make sure that the testing framework runs. You should be able to run ```rake``` or ```rspec``` or ```rails server``` without error.
