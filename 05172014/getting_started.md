@@ -14,7 +14,7 @@ There are lots of options, which you can view by running:
 
 For our purposes, we want to use the Postgres database (easy to deploy to Heroku) and we'll skip Test::Unit (-T option):  
 
-    $ rails new <app_name> -T -d postgresl  
+    $ rails new <app_name> -T -d postgresql  
 
 Configure the config/database.yml file to successfully connect your application to its database and then create the development environment database with ```$ rake db:create``` and ```$ rake db:migrate```
 
