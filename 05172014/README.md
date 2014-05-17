@@ -14,7 +14,7 @@
 3. Localization
 4. CSV processing - import/export
 5. Rake tasks?
-6. Queueing/DelayedJob/Resque
+6. Queueing/DelayedJob/Resque/Sidekiq
 7. Redis?
 8. Geolocation
 9. Twitter Bootstrap / Zurb Foundation
