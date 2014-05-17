@@ -58,3 +58,21 @@ You can now create a remote repository at Github.  If you're logged in there, yo
 ### Start Application Development!
 
 Start with something straightforward that is easy to test so that you can make sure that the testing framework runs. You should be able to run ```rake``` or ```rspec``` or ```rails server``` without error.
+
+#### Generators
+
+There are Rails generators for models, controllers, etc.  I think that model generators are probably more useful since they generate the model file, migration file, etc.  The model generator follows this form:
+
+```
+$ rails generate model <Model name> <attribute_name:type> <attribute_name: type>...
+```
+
+The "type" can be things like:
+"string" - text field with length limit (usually 255 characters)
+"text" - for a text area - lots of text
+"integer" - whole numbers
+"float" - decimal numbers
+"datetime"
+"boolean" - true/false (or 1/0 in the database)
+
+**Reference:** [Rails Guide - Migrations](http://guides.rubyonrails.org/migrations.html)
