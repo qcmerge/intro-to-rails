@@ -38,7 +38,7 @@ Users login to upload/manage files.  Share files.
 Supply URL of recipe so that application can parse it into ingredients, etc
 - Gems: Nokogiri to parse contents of recipes, acts-as-taggable-on (https://github.com/mbleigh/acts-as-taggable-on)
 
-## Anna - Class Wiki
+### Anna - Class Wiki
 
 * Students
   * email
@@ -96,7 +96,7 @@ Topic creator will be notified of new comments via email
 
 Facebook-esque notification tray
 
-## Pages
+#### Pages
 
 * Landing Page
 * Login
