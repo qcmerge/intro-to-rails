@@ -17,4 +17,4 @@
 6. Queueing/DelayedJob/Resque
 7. Redis?
 8. Geolocation
-9. Twitter Boostrap / Zurb Foundation
+9. Twitter Bootstrap / Zurb Foundation
