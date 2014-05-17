@@ -16,7 +16,7 @@ For our purposes, we want to use the Postgres database (easy to deploy to Heroku
 
     $ rails new <app_name> -T -d postgresql  
 
-Configure the config/database.yml file to successfully connect your application to its database and then create the development environment database with ```$ rake db:create``` and ```$ rake db:migrate```
+Change directory (cd) into your new project directory and configure the config/database.yml file to successfully connect your application to its database and then create the development environment database with ```$ rake db:create``` and ```$ rake db:migrate```
 
 **Reference:** [Rails Guide - Getting Started](http://guides.rubyonrails.org/getting_started.html)
 
