@@ -4,6 +4,8 @@
 1. Twitter/Facebook Integration/Howto (Ben)
 2. Devise Lecture (Jim)
 3. Pair up and work on personal projects
+4. Kristin Lasita (Gaslight designer)
+5. Bobby Uhlenbrock (Ample partner)
 
 #### Twitter Integration  
 [Twitter gem](https://github.com/sferik/twitter)
