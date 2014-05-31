@@ -7,6 +7,11 @@
 4. Kristin Lasita (Gaslight designer)
 5. Bobby Uhlenbrock (Ample partner)
 
+### Bootstrap
+[bootstrap-sass gem](https://github.com/twbs/bootstrap-sass)  
+[Bootstrap CSS reference](http://getbootstrap.com/css/)  
+[Bootstrap components reference](http://getbootstrap.com/components/)
+
 #### Twitter Integration  
 [Twitter gem](https://github.com/sferik/twitter)
 
