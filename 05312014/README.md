@@ -30,3 +30,5 @@ OR
 1. Add gem to Gemfile and bundle install
 2. For koala, grab an access token from [Facebook Graph Explorer](https://developers.facebook.com/tools/explorer)   
 3. Add access_token to secrets.yml  
+
+[Sample App that reads Tweets and Facebook posts](https://github.com/qcmerge/intro-to-rails/tree/master/social-integration)
