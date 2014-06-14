@@ -2,7 +2,7 @@
 
 ### Agenda
 1. Deploying to Heroku
-2. Personal project wor
+2. Personal project work time
 
 ### Resources
 * [Nitrous - Deploy to Heroku](http://help.nitrous.io/heroku/)
